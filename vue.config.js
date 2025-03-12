@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+
 module.exports = defineConfig({
-  transpileDependencies: true
+  transpileDependencies: ['vuex', 'some-other-package'] // แปลงเฉพาะ vuex และแพ็กเกจที่ระบุ
 })

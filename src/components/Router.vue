@@ -151,7 +151,7 @@
     <p>การใช้ Vue Router ทำให้การพัฒนาเว็บแอปพลิเคชันแบบหลายหน้ากลายเป็นเรื่องง่ายและมีประสิทธิภาพ ด้วยฟีเจอร์ต่างๆ เช่น dynamic routes, navigation guards, และการใช้งานแบบ SPA (Single-Page Application)</p>
 
     <router-link to="/StateandVuex" class="button-left">ย้อนกลับ</router-link>
-    <router-link to="/Api" class="button-right">ไปที่การใช้งานพื้นฐาน</router-link>
+    <router-link to="/Apipage" class="button-right">ต่อไป</router-link>
   </div>
 </template>
 

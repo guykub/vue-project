@@ -182,6 +182,8 @@ app.delete('/items/:id', (req, res) => {  // รับคำขอ DELETE พร
         <li><strong>ฝั่ง Server (Server.js):</strong> เซิร์ฟเวอร์ลบข้อมูลที่ตรงกับ `id` และส่งสถานะ 204 (No Content) กลับไป</li>
       </ul>
     </div>
+    <router-link to="/Router" class="button-left">ย้อนกลับ</router-link>
+    
   </div>
 </template>
 
@@ -211,32 +213,38 @@ export default {
         });
     },
     addItem() {
-      axios.post(this.apiUrl, { name: this.newItem })
-        .then(response => {
-          this.fetchData();
-        })
-        .catch(error => {
-          console.error("เกิดข้อผิดพลาดในการเพิ่มข้อมูล", error);
-        });
-    },
-    updateItem() {
-      axios.put(`${this.apiUrl}/${this.updateId}`, { name: this.updateValue })
-        .then(response => {
-          this.fetchData();
-        })
-        .catch(error => {
-          console.error("เกิดข้อผิดพลาดในการอัปเดตข้อมูล", error);
-        });
-    },
-    deleteItem() {
-      axios.delete(`${this.apiUrl}/${this.deleteId}`)
-        .then(response => {
-          this.fetchData();
-        })
-        .catch(error => {
-          console.error("เกิดข้อผิดพลาดในการลบข้อมูล", error);
-        });
-    }
+  axios.post(this.apiUrl, { name: this.newItem })
+    .then(response => {  // ใช้ response
+      console.log("ข้อมูลที่เพิ่ม: ", response.data);  // ตัวอย่างการใช้ response
+      this.fetchData();
+    })
+    .catch(error => {
+      console.error("เกิดข้อผิดพลาดในการเพิ่มข้อมูล", error);
+    });
+},
+
+updateItem() {
+  axios.put(`${this.apiUrl}/${this.updateId}`, { name: this.updateValue })
+    .then(response => {  // ใช้ response
+      console.log("ข้อมูลที่อัปเดต: ", response.data);  // ตัวอย่างการใช้ response
+      this.fetchData();
+    })
+    .catch(error => {
+      console.error("เกิดข้อผิดพลาดในการอัปเดตข้อมูล", error);
+    });
+},
+
+deleteItem() {
+  axios.delete(`${this.apiUrl}/${this.deleteId}`)
+    .then(response => {  // ใช้ response
+      console.log("ข้อมูลที่ลบ: ", response.data);  // ตัวอย่างการใช้ response
+      this.fetchData();
+    })
+    .catch(error => {
+      console.error("เกิดข้อผิดพลาดในการลบข้อมูล", error);
+    });
+}
+
   },
   mounted() {
     this.fetchData();

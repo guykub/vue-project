@@ -117,8 +117,8 @@
     </div>
 
     <!-- Add navigation buttons -->
-    <router-link to="/installation" class="button-left">ย้อนกลับ</router-link>
-    <router-link to="/CSS" class="button-right">ไปที่การติดตั้ง</router-link>
+    <router-link to="/ProjectStructure" class="button-left">ย้อนกลับ</router-link>
+    <router-link to="/CSSpage" class="button-right">ต่อไป</router-link>
   </div>
 </template>
 

@@ -87,20 +87,26 @@
 &lt;/template&gt;</code></pre>
 
     <!-- ปุ่มย้อนกลับไปที่หน้า Basic และ Components -->
-    <router-link to="/CSS" class="button-left">ย้อนกลับไปที่ Basic</router-link>
-    <router-link to="/StateandVuex" class="button-right">ไปที่ Components</router-link>
+    <router-link to="/CSSpage" class="button-left">ย้อนกลับ</router-link>
+    <router-link to="/StateandVuex" class="button-right">ต่อไป</router-link>
+    <div>
+    <Greeting />
+    <Counter />
+    <FullName />
+    <ChildComponent />
+  </div>
   </div>
 </template>
-
+  
 <script>
 // เพิ่มคอมโพเนนต์ที่ใช้ภายในนี้
-import Greeting from './Greeting.vue'
-import Counter from './Counter.vue'
+import Greeting from './GreetingComponent.vue'
+import Counter from './CounterComponent.vue'
 import FullName from './FullName.vue'
 import ChildComponent from './ChildComponent.vue'
 
 export default {
-  name: "Components",
+  name: "ComponentsPage",
   components: {
     Greeting,
     Counter,

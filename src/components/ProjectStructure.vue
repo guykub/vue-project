@@ -93,8 +93,8 @@
     </div>
 
     <!-- เพิ่มปุ่มย้อนไปหน้า Home และไป Basic Usage -->
-    <router-link to="/Home" class="button-left">ย้อนกลับ</router-link>
-    <router-link to="/Basic" class="button-right">ไปที่การใช้งานพื้นฐาน</router-link>
+    <router-link to="/InstallationComponent" class="button-left">ย้อนกลับ</router-link>
+    <router-link to="/BasicPage" class="button-right">ต่อไป</router-link>
   </div>
 </template>
 

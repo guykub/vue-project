@@ -31,7 +31,7 @@ import '@/assets/styles.css';
   }
 &lt;/style&gt;
       </code></pre>
-      <p>ในตัวอย่างนี้ ทุกหน้าในโปรเจกต์จะใช้ฟอนต์ `Arial` สำหรับ `<body>` ทุกคอมโพเนนต์</p>
+      <p>ในตัวอย่างนี้ ทุกหน้าในโปรเจกต์จะใช้ฟอนต์ `Arial` สำหรับ `body` ทุกคอมโพเนนต์</p>
     </div>
 
     <div v-if="tab === 2">
@@ -96,8 +96,8 @@ button {
     <button @click="tab = 4">สรุป</button>
 
     <!-- ปุ่มย้อนกลับไปที่หน้า Basic และ Components -->
-    <router-link to="/basic" class="button-left">ย้อนกลับไปที่ Basic</router-link>
-    <router-link to="/components" class="button-right">ไปที่ Components</router-link>
+    <router-link to="/BasicPage" class="button-left">ย้อนกลับ</router-link>
+    <router-link to="/ComponentsPage" class="button-right">ต่อไป</router-link>
   </div>
 </template>
 
@@ -109,7 +109,8 @@ export default {
       tab: 4, // เริ่มต้นแสดง Scoped CSS
     };
   },
-  
+}
+
 </script>
 
 <style scoped>

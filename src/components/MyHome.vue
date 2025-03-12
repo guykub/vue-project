@@ -51,13 +51,13 @@
     </ul>
 
 
-    <router-link to="/installation" class="button-right">ไปที่การติดตั้ง</router-link>
+    <router-link to="/InstallationComponent" class="button-right">ต่อไป</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "MyHome"
 };
 </script>
 
