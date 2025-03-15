@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mx-auto ">
+      <div class="col-md-8 mx-auto">
         <h2>การใช้งานพื้นฐานใน Vue.js</h2>
         <div>
           <button @click="activeTab = 'bind'" :class="{'active-tab': activeTab === 'bind'}">v-bind</button>

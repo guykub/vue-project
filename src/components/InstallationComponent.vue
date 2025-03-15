@@ -62,9 +62,10 @@ export default {
 pre {
   position: relative;
   z-index: 1;
-  margin: 0;
+  margin: 0 auto;
   padding: 1.25rem 1.5rem;
   overflow-x: auto;
+  overflow-y: auto;
   text-align: left;
   white-space: pre;
   word-spacing: normal;

@@ -1,100 +1,120 @@
 <template>
-  <div>
-    <h1>การสร้างคอมโพเนนต์ใน Vue.js</h1>
-    <p>คอมโพเนนต์ใน Vue ช่วยให้โค้ดมีโครงสร้างที่เป็นระเบียบและนำกลับมาใช้ใหม่ได้</p>
-    
-    <h2>ตัวอย่างคอมโพเนนต์พื้นฐาน</h2>
-    <p>คอมโพเนนต์ที่ใช้ข้อมูลจาก `data`:</p>
-    <pre><code>export default {
-  name: "MyComponent",
-  data() {
-    return {
-      message: "Hello Vue!"
-    };
-  }
-};</code></pre>
-    <p>ผลลัพธ์: {{ message }}</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-8 mx-auto text-left">
+        <h2>การสร้างคอมโพเนนต์ใน Vue.js</h2>
+        <p>คอมโพเนนต์ใน Vue ช่วยให้โค้ดมีโครงสร้างที่เป็นระเบียบและนำกลับมาใช้ใหม่ได้</p>
+        <h5>ตัวอย่างคอมโพเนนต์พื้นฐาน</h5>
+        <p>คอมโพเนนต์ที่ใช้ข้อมูลจาก `data`</p>
+        <pre><code style="text-align: left;">
+          export default { <br>
+            data() { <br> 
+              return { <br>
+                message: "Hello Vue!" <br>
+              }; <br>
+            } <br>
+          };
+        </code></pre><br>
+        <p>ผลลัพธ์: {{ message }}</p>
 
-    <h2>การใช้งาน Props</h2>
-    <p>การส่งข้อมูลจากคอมโพเนนต์หลักไปยังคอมโพเนนต์ย่อย:</p>
-    <pre><code>export default {
-  name: "Greeting",
-  props: ['name'],
-  template: '&lt;p&gt;Hello, {{ name }}!&lt;/p&gt;'
-};</code></pre>
-    <p>ในคอมโพเนนต์หลัก:</p>
-    <pre><code>&lt;Greeting :name="'Vue User'" /&gt;</code></pre>
+        <!-- Props -->
+         <h5>การใช้งาน Props</h5>
+         <p>การส่งข้อมูลจากคอมโพเนนต์หลักไปยังคอมโพเนนต์ย่อย</p>
+         <pre><code style="text-align: left;" v-pre>
+          export default { <br> 
+            name: "Greeting", <br>
+            props: ['name'], <br>
+            template: '&lt;p&gt;Hello, {{ name }}!&lt;/p&gt;' <br>
+          };
+         </code></pre><br>
+         <p>ในคอมโพเนนต์หลัก</p> <br>
+         <pre><code>&lt;Greeting :name="'Vue User'" /&gt;</code></pre><br>
 
-    <h2>การใช้ Methods</h2>
-    <p>วิธีการกำหนดฟังก์ชันในคอมโพเนนต์:</p>
-    <pre><code>export default {
-  name: "Counter",
-  data() {
-    return {
-      count: 0
-    };
-  },
-  methods: {
-    increment() {
-      this.count++;
-    }
-  }
-};</code></pre>
-    <p>ปุ่มเพิ่มจำนวน: <button @click="increment">เพิ่ม</button></p>
-    <p>จำนวน: {{ count }}</p>
+         <!-- Methods -->
+          <h5>การใช้ Methods</h5>
+          <p>วิธีการกำหนดฟังก์ชันในคอมโพเนนต์</p>
+          <pre><code style="text-align: left;">
+            export default { <br>
+              name: "Counter", <br>
+              data() { <br>
+                return { <br>
+                  count: 0 <br>
+                }; <br>
+              }, <br>
+              methods: { <br>
+                increment() { <br>
+                  this.count++; <br>
+                } <br>
+              } <br>
+            }; 
+          </code></pre><br>
+          <p>ปุ่มเพิ่มจำนวน: <button @click="increment">เพิ่ม</button></p>
+          <p>จำนวน: {{ count }}</p>
 
-    <h2>การใช้ Computed Properties</h2>
-    <p>คอมโพเนนต์ที่ใช้การคำนวณค่าจากข้อมูล:</p>
-    <pre><code>export default {
-  name: "FullName",
-  data() {
-    return {
-      firstName: "John",
-      lastName: "Doe"
-    };
-  },
-  computed: {
-    fullName() {
-      return `${this.firstName} ${this.lastName}`;
-    }
-  }
-};</code></pre>
-    <p>ชื่อเต็ม: {{ fullName }}</p>
+          <!-- Computed Properties -->
+           <h5>การใช้ Computed Properties</h5>
+           <p>คอมโพเนนต์ที่ใช้การคำนวณค่าจากข้อมูล</p>
+           <pre><code style="text-align: left;">
+            export default { <br>
+              name: "FullName", <br>
+              data() { <br>
+                return { <br>  
+                  firstName: "John", <br>
+                  lastName: "Doe" <br>
+                }; <br>
+              }, <br>
+              computed: { <br>
+                fullName() { <br>
+                  return `${this.firstName} ${this.lastName}`; <br>
+                } <br>
+              } <br>
+            };
+           </code></pre><br>
+           <p>ชื่อเต็ม : {{ fullName }}</p>
 
-    <h2>การใช้ Events</h2>
-    <p>การส่งข้อมูลจากคอมโพเนนต์ย่อยกลับไปที่คอมโพเนนต์หลัก:</p>
-    <pre><code>export default {
-  name: "ChildComponent",
-  methods: {
-    sendData() {
-      this.$emit('sendData', 'ข้อมูลจากลูก');
-    }
-  }
-};</code></pre>
-    <p>ในคอมโพเนนต์หลัก:</p>
-    <pre><code>&lt;ChildComponent @sendData="receiveData" /&gt;</code></pre>
-    <p>ข้อมูลจากลูก: {{ dataFromChild }}</p>
+           <!-- Events -->
+           <h5>การใช้ Events</h5>
+           <p>การส่งข้อมูลจากคอมโพเนนต์ย่อยกลับไปที่คอมโพเนนต์หลัก</p>
+           <pre><code style="text-align: left;">
+            export default { <br>
+              name: "ChildComponent", <br>
+              methods: { <br>
+                sedData() { <br>
+                  this.$emit('sendData', 'ข้อมูลจากลูก') <br>
+                } <br> 
+              } <br>
+            };
+           </code></pre><br>
+           <p>ในคอมโพเนนต์หลัก</p>
+           <pre><code>&lt;ChildComponent @sendData="receiveData" /&gt;</code></pre><br>
+           <p>ข้อมูลจากลูก: {{ dataFromChild }}</p>
+           
+           <!-- ตัวอย่างการใช้งานทั้งหมด -->
+            <p>ตัวอย่างการรวมคอมโพเนนต์ทั้งหมดในแอปพลิเคชัน</p>
+            <pre><code style="text-align: left;">
+              &lt;template&gt;<br>
+              &lt;div&gt;<br>
+              &lt;Greeting :name="'Vue User'"/&gt;<br>
+              &lt;Counter /&gt;<br>
+              &lt;FullName /&gt;<br>
+              &lt;ChildComponent @sendData="receiveData"/&gt;<br>
+              &lt;/div&gt;<br>
+              &lt;/template&gt;
+            </code></pre>
 
-    <h2>ตัวอย่างการใช้งานทั้งหมด</h2>
-    <p>ตัวอย่างการรวมคอมโพเนนต์ทั้งหมดในแอปพลิเคชัน:</p>
-    <pre><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;Greeting :name="'Vue User'" /&gt;
-    &lt;Counter /&gt;
-    &lt;FullName /&gt;
-    &lt;ChildComponent @sendData="receiveData" /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</code></pre>
-
-    <!-- ปุ่มย้อนกลับไปที่หน้า Basic และ Components -->
-    <router-link to="/CSSpage" class="button-left">ย้อนกลับ</router-link>
-    <router-link to="/StateandVuex" class="button-right">ต่อไป</router-link>
-    <div>
-    <Greeting />
-    <Counter />
-    <FullName />
-    <ChildComponent />
-  </div>
+            <!-- ปุ่มย้อนกลับไปที่หน้า Basic และ Components -->
+             <div style="justify-items: start;">
+              <Greeting/>
+              <Counter/>
+              <FullName/>
+              <ChildComponent/>
+             </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-6 d-flex justify-content-start"><router-link to="/CSSpage" class="btn btn-success">ย้อนกลับ</router-link></div>
+        <div class="col-6 d-flex justify-content-end"><router-link to="/StateandVuex" class="btn btn-success">ต่อไป</router-link></div>
+      </div>
+    </div>
   </div>
 </template>
   
@@ -104,7 +124,9 @@ import Greeting from './GreetingComponent.vue'
 import Counter from './CounterComponent.vue'
 import FullName from './FullName.vue'
 import ChildComponent from './ChildComponent.vue'
-
+import '@/assets/Style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 export default {
   name: "ComponentsPage",
   components: {
@@ -115,6 +137,7 @@ export default {
   },
   data() {
     return {
+      message: "Hello Vue!",
       dataFromChild: ''
     };
   },
@@ -132,12 +155,28 @@ div {
   margin-top: 20px;
 }
 pre {
+  white-space: pre;
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
   background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 8px;
   overflow-x: auto;
+  overflow-y: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 code {
+  font-family: "Courier New",monospace;
+  white-space: nowrap;
+  word-break: break-word;
+  display: block;
+  margin-top: 10px;
+  margin-left: 3rem;
+  margin-bottom: 10px;
+  text-align: center;
   font-size: 1.1em;
 }
 button {
@@ -146,31 +185,13 @@ button {
   font-size: 16px;
 }
 /* เพิ่มสไตล์สำหรับปุ่ม */
-.button-left {
-  position: fixed;
-  left: 0;
-  bottom: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.button-right {
-  position: fixed;
-  right: 0;
-  bottom: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+.btn{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 </style>
