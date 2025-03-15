@@ -1,4 +1,4 @@
-import '@/assets/styles.css'; 
+
 <template>
   <div>
     <h1>การใช้ CSS ใน Vue.js</h1>
@@ -102,6 +102,9 @@ button {
 </template>
 
 <script>
+import '@/assets/Style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 export default {
   name: "CSSExplanation",
   data() {
