@@ -167,7 +167,6 @@ pre {
   overflow-y: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 code {
   font-family: "Courier New",monospace;
   white-space: nowrap;

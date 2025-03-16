@@ -76,7 +76,6 @@ pre {
   hyphens: none;
   background: #2c3e50;
 }
-
 code {
   margin: 0;
   border-radius: 3px;
