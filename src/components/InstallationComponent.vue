@@ -21,13 +21,14 @@
         <pre><code>cd my-vue-project</code></pre><br>
         <p>จากนั้นทำการรันโปรเจคขึ้นมาด้วยคำสั่ง</p>
         <pre><code>npm run serve</code></pre><br>
-        <p>ทุกคนคงจะสงสัยนะครับว่าทำไม vue ถึงใช้ npm run serve เพราะ vue cil ตั้งแต่ตอนติดตั้งมาได้กำหนดไว้ในตัวของ package.json นะครับ</p>
-        <img src="@/assets/vue-serve.png" alt="รันโดยใช้ npm run serve">
-        <p>แต่ถ้าอยากใช้ npm start นะครับก็ทำได้เช่นกัน โดยเข้าไปเพิ่มสคริปต์ในตัว package.json นะครับ</p>
-        <img src="@/assets/vue-start.png" alt="รันโดยใช้ npm start">
+        <img src="@/assets/compile.png" alt="Compile ">
+        <!-- <p>ทุกคนคงจะสงสัยนะครับว่าทำไม vue ถึงใช้ npm run serve เพราะ vue cil ตั้งแต่ตอนติดตั้งมาได้กำหนดไว้ในตัวของ package.json นะครับ</p>
+        <img src="@/assets/vue-serve.png" alt="รันโดยใช้ npm run serve"> -->
+        <!-- <p>แต่ถ้าอยากใช้ npm start นะครับก็ทำได้เช่นกัน โดยเข้าไปเพิ่มสคริปต์ในตัว package.json นะครับ</p>
+        <img src="@/assets/vue-start.png" alt="รันโดยใช้ npm start"> -->
         <p>ตอนที่รัน มันจะหน้าตาประมาณนี้นะครับ เราต้องรอให้ครบ 100% เวลาเขียนโค้ดมันจะค่อย Compile ให้เราตลอดให้เราเห็นหน้าเว็บเราล่าสุดเสมอ</p>
         <img src="@/assets/vue-serve-success.png" alt="รันโดยใช้ npm run serve ผ่าน">
-        <img src="@/assets/vue-start-success.png" alt="รันโดยใช้ npm start ผ่าน">
+        <!-- <img src="@/assets/vue-start-success.png" alt="รันโดยใช้ npm start ผ่าน"> -->
         <p>เมื่อกดรันสำเร็จเราจะเห็นลิงค์ที่นำไปสู่เว็บไซต์ของเรา <span class="token function"><u>http://localhost:8080</u></span></p>
         <img src="@/assets/first-web.png" alt="หน้าแรกของเว็บ">
         <p>หน้าตาของเว็บไซต์เราเริ่มแรกนะครับ</p>        
