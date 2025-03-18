@@ -21,7 +21,7 @@
         <pre><code>cd my-vue-project</code></pre><br>
         <p>จากนั้นทำการรันโปรเจคขึ้นมาด้วยคำสั่ง</p>
         <pre><code>npm run serve</code></pre><br>
-        <img src="@/assets/compile.png" alt="Compile ">
+        <img src="@/assets/compile.png" alt="Compile">
         <!-- <p>ทุกคนคงจะสงสัยนะครับว่าทำไม vue ถึงใช้ npm run serve เพราะ vue cil ตั้งแต่ตอนติดตั้งมาได้กำหนดไว้ในตัวของ package.json นะครับ</p>
         <img src="@/assets/vue-serve.png" alt="รันโดยใช้ npm run serve"> -->
         <!-- <p>แต่ถ้าอยากใช้ npm start นะครับก็ทำได้เช่นกัน โดยเข้าไปเพิ่มสคริปต์ในตัว package.json นะครับ</p>
