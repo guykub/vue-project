@@ -4,13 +4,20 @@ body {
     background-color: #f0f0f0;
     color: #333;
   }
-  
+  .button-btn{
+    padding: 10px;
+    background-color: skyblue !important;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
   h1,h2,h3 {
     font-weight: bold;
     color: #343a40;
   }
   h1{
     font-size: 2.5rem;
+    color: #333;
   }
   h2{
     font-size: 2rem;

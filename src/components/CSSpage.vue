@@ -21,7 +21,8 @@
               color : red; <br>
             }
           </code></pre><br>
-          <p>ในตัวอย่างนี้ CSS จะถูกใช้เฉพาะในคอมโพเนนต์ที่มี `scoped` เท่านั้น</p>
+          <p>ในตัวอย่างนี้ CSS จะถูกใช้เฉพาะในคอมโพเนนต์ที่มี `scoped` เท่านั้น และ</p>
+          <p class="example">แสดงข้อความสีแดง</p>
          </div>
 
          <!-- Global CSS -->
@@ -30,12 +31,13 @@
             <p>Global CSS คือการใช้สไตล์ที่ใช้ได้ทั่วทั้งแอปพลิเคชัน</p>
             <pre><code style="text-align: left;">
               &lt;style&gt; <br>
-              body { <br>
-                font-family: Arial, sans-serif; <br>
+              .fontfamily { <br>
+                font-family: "Sriracha", cursive; <br>
               } <br>
               &lt;/style&gt;
             </code></pre><br>
             <p>ในตัวอย่างนี้ ทุกหน้าในโปรเจคจะใช้ฟอนต์ `Arial` สำหรับ `body` ทุกคอมโพเนนต์</p>
+            <p class="fontfamily">แสดงข้อความ Show message </p>
           </div>
 
           <!-- Inline Styles -->
@@ -43,9 +45,10 @@
             <h3>Inline Styles</h3>
             <p>Inline Styles คือการกำหนดสไตล์ภายใน HTML โดยตรง โดยไม่ต้องใช้ไฟล์ CSS</p>
             <pre style="width: auto;"><code>
-              &lt;div :style="{'color': 'blue', 'font-size': '20px'}"&gt; ข้อความที่มีสีฟ้าและขนาด 20px &lt;/div&gt;
+              &lt;div :style="{'color': 'blue', 'font-size': '20px'}"&gt; ข้อความที่มีสีฟ้าและขนาด 20 px &lt;/div&gt;
             </code></pre><br>
             <p>ในตัวอย่างนี้การใช้ Inline Styles จะช่วยให้กำหนดสไตล์ได้ในทันทีภายในคอมโพเนนต์</p>
+            <p style="color: blue;font-size: 20px;">ข้อความที่มีสีฟ้าและขนาด 20 px</p>
            </div>
 
            <!-- External CSS -->
@@ -68,12 +71,14 @@
                 } <br>
                 button { <br>
                   padding : 10px <br>
-                  background-color: #4CAF50; <br>
+                  background-color: skyblue; <br>
                   color: #fff; <br>
                   border: none; <br>
                   cursor: pointer; <br>
                 } <br>
-              </code></pre>
+              </code></pre><br>
+              <h1 class="h1">แสดงข้อความและตัวอย่าง</h1>
+              <button class="button-btn">แสดงปุ่ม</button>
             </div>
 
             <!-- สรุป -->
@@ -110,8 +115,10 @@ export default {
 }
 
 </script>
-
 <style scoped>
+.example{
+  color: red;
+}
 h1 {
   color: #2c3e50;
 }
@@ -131,7 +138,6 @@ pre {
   overflow-y: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 code {
   font-family: "Courier New",monospace;
   white-space: nowrap;
@@ -170,5 +176,11 @@ button:hover {
     cursor: pointer;
     border-radius: 5px;
     font-size: 1rem;
+}
+</style>
+
+<style>
+.fontfamily{
+  font-family: "Sriracha", cursive;
 }
 </style>
